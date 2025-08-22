@@ -87,17 +87,22 @@ body {
 
 /* Menú */
 #menu {
-  display: flex;
+   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background: #004D98;
-  border-radius: 15px;
   padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  /* Degradado animado */
+  background: linear-gradient(270deg, #A50044, #004D98, #A50044);
+  background-size: 600% 600%;
+  animation: moverDegradado 12s ease infinite;
+  color: white; /* mantiene el color del texto */
 }
 
 /* Mantengo tu regla global para pantallas grandes */
@@ -139,24 +144,33 @@ body {
   #menu {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
+    padding: 10px;
   }
 
-  #menu ul {
+  /* Botón visible */
+  #menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #menu #menu-links {
+    display: none;             /* oculto por defecto en móvil */
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
-  #menu ul li {
-    width: 100%;
+  /* Menú activo cuando se abre */
+  #menu #menu-links.active {
+    display: flex;
   }
 
-  #menu ul li a {
+  #menu-links li a {
     display: block;
-    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
     text-align: left;
-    padding: 15px;
+    width: 100%;
   }
 }
 
@@ -630,12 +644,32 @@ article img {
 /* Todos los videos dentro de artículos */
 article video {
     width: 100%;          /* ocupa todo el ancho del contenedor */
-    max-width: 700px;     /* no se hace demasiado grande */
+    max-width: 500px;     /* no se hace demasiado grande */
     height: auto;         /* mantiene proporción */
     display: block;
     margin: 0 auto;       /* centrado horizontal */
     border-radius: 12px;  /* opcional */
     box-shadow: var(--sombra-suave);
+}
+/* Contenedor responsive para iframes */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;    /* tamaño máximo deseado */
+    padding-bottom: 56.25%; /* relación de aspecto 16:9 */
+    height: 0;
+    margin: 0 auto;      /* centra el iframe */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px; /* opcional, para bordes redondeados */
+    box-shadow: var(--sombra-suave); /* opcional */
 }
 
 /* Ajuste en pantallas pequeñas */
