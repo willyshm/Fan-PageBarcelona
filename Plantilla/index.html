@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fanpage del Fútbol Club Barcelona">
+    <meta name="keywords" content="FC Barcelona, Barça, fútbol, Messi, Camp Nou">
+    <title>FC Barcelona - Fanpage</title>
+    <link rel="stylesheet" href="/Plantilla/css/misestilos.css">
+    <link rel="shortcut icon" href="/Plantilla/imagenes/EscudoBarcelona.png" />
+</head>
+
+<body>
+    <div id="agrupar">
+
+        <!-- Encabezado principal -->
+        <header id="principal">
+            <img src="/Plantilla/imagenes/EscudoBarcelona.png" width="150" height="auto" alt="Escudo FC Barcelona">
+            <h1>Fútbol Club Barcelona</h1>
+            <h2>“Més que un club”</h2>
+        </header>
+
+        <nav id="menu">
+            <button id="menu-toggle">☰ Menú</button>
+            <ul id="menu-links">
+                <li><a href="/Plantilla/index.html">Inicio</a></li>
+                <li><a href="/Plantilla/html/historia.html">Historia</a></li>
+                <li><a href="/Plantilla/html/jugadores.html">Jugadores</a></li>
+                <li><a href="/Plantilla/html/titulos.html">Títulos</a></li> 
+                <li><a href="/Plantilla/html/aficion.html">La Afición</a></li> 
+            </ul>
+        </nav>
+
+   <!-- Sección principal -->
+<section id="seccion">
+
+    <!-- Primer artículo: Presentación general -->
+    <article>
+        <header class="cabecera">
+            <h1>Bienvenido al FC Barcelona</h1>
+            <h2>Más que un club, una pasión</h2>
+            <p>Publicado el <time datetime="2025-08-21">21 de Agosto de 2025</time></p>
+        </header>
+        <div class="texto_articulo">
+            El Fútbol Club Barcelona es un club que simboliza la pasión, el talento y la identidad catalana.
+            Desde sus campos de entrenamiento hasta el emblemático Camp Nou, millones de aficionados comparten
+            la emoción de cada partido y celebran juntos los triunfos de su equipo.
+            Aquí encontrarás noticias, vídeos, y todo lo relacionado con la magia blaugrana.
+        </div>
+        <figure>
+            <img src="/Plantilla/imagenes/campNou.jpg" alt="Camp Nou estadio FC Barcelona">
+            <figcaption>El Camp Nou, hogar del FC Barcelona</figcaption>
+        </figure>
+    </article>
+
+    <!-- Segundo artículo: Multimedia / Vídeo -->
+    <article>
+        <header class="cabecera">
+            <h1>Momentos emocionantes</h1>
+            <h2>Revive la pasión blaugrana</h2>
+            <p>Publicado el <time datetime="2025-08-21">21 de Agosto de 2025</time></p>
+        </header>
+        <div class="texto_articulo">
+            Disfruta de los mejores goles, jugadas y celebraciones del Barça.
+            Nuestro club no solo destaca por su fútbol, sino por unir a millones de aficionados en todo el mundo.
+        </div>
+        <figure>
+            <iframe 
+            width="560" height="280"
+            src="https://www.youtube.com/embed/1yLAv469o-I?si=PwR2Y-on0ChweXEt" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Goles, jugadas y emociones blaugranas</figcaption>
+        </figure>
+    </article>
+
+</section>
+        <!-- Pie de página -->
+        <footer id="pie">
+            Fanpage no oficial &copy; 2025 – Inspirada en la pasión por el FC Barcelona
+        </footer>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menuLinks = document.getElementById("menu-links");
+
+        toggleBtn.addEventListener("click", () => {
+            menuLinks.classList.toggle("active");
+        });
+
+        // opcional: cerrar el menú al hacer clic en un enlace
+        const links = menuLinks.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                menuLinks.classList.remove("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

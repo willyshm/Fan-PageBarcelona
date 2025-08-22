@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Títulos del FC Barcelona">
+    <meta name="keywords" content="FC Barcelona, títulos, trofeos, Champions, Liga">
+    <title>Títulos - FC Barcelona</title>
+    <link rel="stylesheet" href="/Plantilla/css/misestilos.css">
+    <link rel="shortcut icon" href="/Plantilla/imagenes/EscudoBarcelona.png" />
+</head>
+
+<body>
+    <div id="agrupar">
+
+        <!-- Encabezado principal -->
+        <header id="principal">
+            <img src="/Plantilla/imagenes/EscudoBarcelona.png" width="150" alt="Escudo FC Barcelona">
+            <h1>FC Barcelona</h1>
+            <h2>“Més que un club”</h2>
+        </header>
+
+        <!-- Menú -->
+        <nav id="menu">
+            <button id="menu-toggle">☰ Menú</button>
+            <ul id="menu-links">
+                <li><a href="/Plantilla/index.html">Inicio</a></li>
+                <li><a href="/Plantilla/html/historia.html">Historia</a></li>
+                <li><a href="/Plantilla/html/jugadores.html">Jugadores</a></li>
+                <li><a href="/Plantilla/html/titulos.html">Títulos</a></li> 
+                <li><a href="/Plantilla/html/aficion.html">La Afición</a></li> 
+            </ul>
+        </nav>
+
+        <!-- Título de la sección -->
+        <section id="titulos">
+            <header class="cabecera">
+                <h2>Títulos del FC Barcelona</h2>
+                <p>Conoce la historia de los trofeos del club</p>
+            </header>
+
+            <div class="galeria">
+                <!-- Tarjeta: LaLiga -->
+                <article class="titulo">
+                     <img src="/Plantilla/imagenes/laliga.png" alt="LaLiga">
+                    <h3>LaLiga</h3>
+                    <p><strong>Veces ganado:</strong> 27</p>
+                    <p><strong>Años:</strong> 1929, 1945, 1948, 1949, 1952, 1953, 1959, 1960, 1974, 1985, 1991, 1992, 1993, 1994, 1998, 1999, 2005, 2006, 2009, 2010, 2011, 2013, 2015, 2016, 2018, 2019, 2023</p>
+                </article>
+
+                <!-- Tarjeta: Copa del Rey -->
+                <article class="titulo">
+                     <img src="/Plantilla/imagenes/coparey.jpg" alt="CopaDelRey">
+                    <h3>Copa del Rey</h3>
+                    <p><strong>Veces ganado:</strong> 31</p>
+                    <p><strong>Años:</strong> 1910, 1912, 1913, 1920, 1922, 1925, 1926, 1928, 1942, 1951, 1952, 1953, 1957, 1959, 1963, 1968, 1971, 1978, 1981, 1983, 1988, 1990, 1997, 1998, 2009, 2012, 2015, 2016, 2017, 2018, 2021</p>
+                </article>
+
+                <!-- Tarjeta: UEFA Champions League -->
+                <article class="titulo">
+                     <img src="/Plantilla/imagenes/champions.png" alt="ChampionsLeague">
+                    <h3>UEFA Champions League</h3>
+                    <p><strong>Veces ganado:</strong> 5</p>
+                    <p><strong>Años:</strong> 1992, 2006, 2009, 2011, 2015</p>
+                </article>
+
+                <!-- Tarjeta: Supercopa de España -->
+                <article class="titulo">
+                     <img src="/Plantilla/imagenes/supercopaespaña.jpg" alt="SupercopaEspaña">
+                    <h3>Supercopa de España</h3>
+                    <p><strong>Veces ganado:</strong> 14</p>
+                    <p><strong>Años:</strong> 1983, 1991, 1992, 1994, 1996, 2005, 2006, 2009, 2010, 2011, 2013, 2016, 2018, 2023</p>
+                </article>
+
+                <!-- Tarjeta: Supercopa de Europa -->
+                <article class="titulo">
+                     <img src="/Plantilla/imagenes/supercopaespa.png" alt="SupercopaEuropa">
+                    <h3>Supercopa de Europa</h3>
+                    <p><strong>Veces ganado:</strong> 5</p>
+                    <p><strong>Años:</strong> 1992, 1997, 2009, 2011, 2015</p>
+                </article>
+
+                <!-- Tarjeta: Mundial de Clubes -->
+                <article class="titulo">
+                     <img src="/Plantilla/imagenes/mundial.jpg" alt="MundialClubes">
+                    <h3>Mundial de Clubes</h3>
+                    <p><strong>Veces ganado:</strong> 3</p>
+                    <p><strong>Años:</strong> 2009, 2011, 2015</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer id="pie">
+            Fanpage no oficial &copy; 2025 – Inspirada en la pasión por el FC Barcelona
+        </footer>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menuLinks = document.getElementById("menu-links");
+
+        toggleBtn.addEventListener("click", () => {
+            menuLinks.classList.toggle("active");
+        });
+
+        const links = menuLinks.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                menuLinks.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+</html>

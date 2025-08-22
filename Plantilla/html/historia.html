@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historia del Fútbol Club Barcelona">
+    <meta name="keywords" content="FC Barcelona, Barça, historia, Joan Gamper, Camp Nou">
+    <title>FC Barcelona - Historia</title>
+    <link rel="stylesheet" href="/Plantilla/css/misestilos.css">
+    <link rel="shortcut icon" href="/Plantilla/imagenes/EscudoBarcelona.png" />
+</head>
+
+<body>
+    <div id="agrupar">
+
+        <!-- Encabezado principal -->
+        <header id="principal">
+            <img src="/Plantilla/imagenes/EscudoBarcelona.png" width="150" height="auto" alt="Escudo FC Barcelona">
+            <h1>Fútbol Club Barcelona</h1>
+            <h2>“Més que un club”</h2>
+        </header>
+
+        <!-- Menú de navegación -->
+        <nav id="menu">
+            <button id="menu-toggle">☰ Menú</button>
+            <ul id="menu-links">
+                <li><a href="/Plantilla/index.html">Inicio</a></li>
+                <li><a href="/Plantilla/html/historia.html">Historia</a></li>
+                <li><a href="/Plantilla/html/jugadores.html">Jugadores</a></li>
+                <li><a href="/Plantilla/html/titulos.html">Títulos</a></li> 
+                <li><a href="/Plantilla/html/aficion.html">La Afición</a></li> 
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <section id="seccion">
+
+            <article>
+                <header class="cabecera">
+                    <h1>Historia del FC Barcelona</h1>
+                    <h2>Desde sus orígenes hasta hoy</h2>
+                </header>
+                <div class="texto_articulo">
+                    <p>
+                        El <strong>Fútbol Club Barcelona</strong> fue fundado en <time datetime="1899">1899</time> por
+                        un grupo de futbolistas extranjeros liderados por <em>Hans Gamper</em> (conocido como Joan
+                        Gamper en Cataluña). 
+                        Desde su creación, el club se convirtió en un símbolo de identidad catalana y en un referente del fútbol mundial.
+                    </p>
+                    <p>
+                        Durante su historia, el Barça ha superado guerras, dictaduras y crisis sociales, siempre manteniéndose fiel
+                        a su lema: <strong>“Més que un club”</strong>. En cada época, grandes jugadores han defendido la camiseta blaugrana, 
+                        dejando una huella imborrable en la historia del fútbol.
+                    </p>
+                </div>
+                <figure>
+                    <img src="/Plantilla/imagenes/16070442.jpg  " alt="Fundadores del FC Barcelona">
+                    <figcaption>Fotografía histórica de los fundadores del FC Barcelona</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <header class="cabecera">
+                    <h2>Momentos históricos</h2>
+                </header>
+                <div class="texto_articulo">
+                    <ul>
+                        <li><strong>1899:</strong> Fundación del club por Joan Gamper.</li>
+                        <li><strong>1929:</strong> El Barça gana la primera Liga de España.</li>
+                        <li><strong>1957:</strong> Inauguración del <em>Camp Nou</em>, el estadio más grande de Europa.</li>
+                        <li><strong>1992:</strong> Primera Champions League en Wembley con Johan Cruyff como entrenador.</li>
+                        <li><strong>2009:</strong> El Barça de Guardiola logra el histórico <em>sextete</em>.</li>
+                        <li><strong>Era Messi:</strong> El argentino se convierte en el máximo goleador y leyenda del club.</li>
+                    </ul>
+                </div>
+                <figure>
+                    <img src="/Plantilla/imagenes/campnouinau.jpg" alt="Camp Nou en su inauguración">
+                    <figcaption>El Camp Nou el día de su inauguración en 1957</figcaption>
+                </figure>
+            </article>
+
+        </section>
+
+        <!-- Columna lateral con frases -->
+        <aside id="columna">
+            <blockquote>
+                “Ser del Barça es la mejor cosa del mundo.” — Johan Cruyff.
+            </blockquote>
+            <br>
+            <blockquote>
+                “El Barça es el ejército desarmado de Cataluña.” — Manuel Vázquez Montalbán.
+            </blockquote>
+        </aside>
+
+        <!-- Pie de página -->
+        <footer id="pie">
+            Fanpage no oficial &copy; 2025 – Inspirada en la pasión por el FC Barcelona
+        </footer>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menuLinks = document.getElementById("menu-links");
+
+        toggleBtn.addEventListener("click", () => {
+            menuLinks.classList.toggle("active");
+        });
+
+        // cerrar el menú al hacer clic en un enlace
+        const links = menuLinks.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                menuLinks.classList.remove("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
